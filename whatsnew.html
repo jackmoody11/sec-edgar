@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>What’s New &mdash; secedgar 0.2.2 documentation</title>
+  <title>What’s New &mdash; secedgar 0.2.3 documentation</title>
   
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                0.2.2
+                0.2.3
               </div>
             
           
@@ -234,7 +234,9 @@
 <div class="section" id="highlights">
 <h3>Highlights<a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">secedgar.filings.cik_lookup.CIKLookup</span></code> tries to use <code class="docutils literal notranslate"><span class="pre">secedgar.utils.cik_map.get_cik_map</span></code> first when looking up tickers/company names (regardless of whether tickers are upper or lowercase)</p></li>
 <li><p>Adds validation to <code class="docutils literal notranslate"><span class="pre">secedgar.utils.cik_map.get_cik_map</span></code> to ensure correct key options are being used</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">secedgar.client.network_client.NetworkClient</span></code> now pauses at the end of request as well if <cite>pause</cite> is given.</p></li>
 </ul>
 </div>
 <div class="section" id="contributors">
