@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to secedgar’s documentation! &mdash; secedgar 0.4.0-alpha.2 documentation</title>
+  <title>Welcome to secedgar’s documentation! &mdash; secedgar 0.5.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -15,7 +15,9 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
@@ -31,7 +33,7 @@
             <a href="#" class="icon icon-home"> secedgar
           </a>
               <div class="version">
-                0.4.0-alpha.2
+                0.5.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -48,6 +50,7 @@
 <li class="toctree-l1"><a class="reference internal" href="ciklookup.html">CIK Lookup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filings.html">Filings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filingtypes.html">Filing Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rest_api.html">REST API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cikmap.html">Finding Company CIKs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="client.html">Using Network Client</a></li>
 <li class="toctree-l1"><a class="reference internal" href="parser.html">Parser</a></li>
@@ -72,8 +75,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
-      <li>Welcome to secedgar’s documentation!</li>
+      <li><a href="#" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Welcome to secedgar’s documentation!</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -84,7 +87,7 @@
            <div itemprop="articleBody">
              
   <section id="welcome-to-secedgar-s-documentation">
-<h1>Welcome to secedgar’s documentation!<a class="headerlink" href="#welcome-to-secedgar-s-documentation" title="Permalink to this headline"></a></h1>
+<h1>Welcome to secedgar’s documentation!<a class="headerlink" href="#welcome-to-secedgar-s-documentation" title="Permalink to this heading"></a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound" id="getting-started">
@@ -96,7 +99,10 @@
 <li class="toctree-l2"><a class="reference internal" href="usage.html#saving-filings">Saving Filings</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="ciklookup.html">CIK Lookup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ciklookup.html">CIK Lookup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="ciklookup.html#secedgar.cik_lookup.CIKLookup"><code class="docutils literal notranslate"><span class="pre">CIKLookup</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="filings.html">Filings</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="filings.html#filings-function">Filings Function</a></li>
 <li class="toctree-l2"><a class="reference internal" href="filings.html#filings-classes">Filings Classes</a></li>
@@ -109,8 +115,18 @@
 <li class="toctree-l2"><a class="reference internal" href="filingtypes.html#using-filingtype-with-secedgar">Using FilingType with secedgar</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="cikmap.html">Finding Company CIKs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="client.html">Using Network Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rest_api.html">REST API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#wrapper">Wrapper</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cikmap.html">Finding Company CIKs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cikmap.html#secedgar.cik_lookup.get_cik_map"><code class="docutils literal notranslate"><span class="pre">get_cik_map()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="client.html">Using Network Client</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="client.html#secedgar.client.NetworkClient"><code class="docutils literal notranslate"><span class="pre">NetworkClient</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="parser.html">Parser</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="parser.html#parsing-meta-data">Parsing Meta Data</a></li>
 </ul>
@@ -120,6 +136,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="whatsnew.html">What’s New</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="whatsnew.html#v0-5-0">v0.5.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="whatsnew.html#v0-4-1">v0.4.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whatsnew.html#v0-4-0">v0.4.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whatsnew.html#v0-3-4">v0.3.4</a></li>
 <li class="toctree-l2"><a class="reference internal" href="whatsnew.html#v0-3-3">v0.3.3</a></li>

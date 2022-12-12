@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Parser &mdash; secedgar 0.4.0-alpha.2 documentation</title>
+  <title>Parser &mdash; secedgar 0.5.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -15,7 +15,9 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="author" title="About these documents" href="about.html" />
     <link rel="index" title="Index" href="genindex.html" />
@@ -32,7 +34,7 @@
             <a href="index.html" class="icon icon-home"> secedgar
           </a>
               <div class="version">
-                0.4.0-alpha.2
+                0.5.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
@@ -49,10 +51,15 @@
 <li class="toctree-l1"><a class="reference internal" href="ciklookup.html">CIK Lookup</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filings.html">Filings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="filingtypes.html">Filing Types</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rest_api.html">REST API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cikmap.html">Finding Company CIKs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="client.html">Using Network Client</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Parser</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#parsing-meta-data">Parsing Meta Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#parsing-meta-data">Parsing Meta Data</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#secedgar.parser.MetaParser"><code class="docutils literal notranslate"><span class="pre">MetaParser</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#secedgar.parser.F4Parser"><code class="docutils literal notranslate"><span class="pre">F4Parser</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="cli.html">Command Line Interface</a></li>
@@ -76,8 +83,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Parser</li>
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Parser</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/parser.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -88,13 +95,13 @@
            <div itemprop="articleBody">
              
   <section id="parser">
-<span id="id1"></span><h1>Parser<a class="headerlink" href="#parser" title="Permalink to this headline"></a></h1>
+<span id="id1"></span><h1>Parser<a class="headerlink" href="#parser" title="Permalink to this heading"></a></h1>
 <p>Starting in version 0.3.0, secedgar will start to implement a general-purpose parser.</p>
 <p>This is expected to be an ambitious task and may not be feasible for all filing types.
 However, given user feedback, we feel that it is worth a shot. Please note that
 parsing will remain experimental for the foreseeable future.</p>
 <section id="parsing-meta-data">
-<h2>Parsing Meta Data<a class="headerlink" href="#parsing-meta-data" title="Permalink to this headline"></a></h2>
+<h2>Parsing Meta Data<a class="headerlink" href="#parsing-meta-data" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="secedgar.parser.MetaParser">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">secedgar.parser.</span></span><span class="sig-name descname"><span class="pre">MetaParser</span></span><a class="headerlink" href="#secedgar.parser.MetaParser" title="Permalink to this definition"></a></dt>
